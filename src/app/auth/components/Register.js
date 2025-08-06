@@ -6,6 +6,7 @@ import React, { useState } from "react";
 export default function Register({ Screen, setScreen }) {
   const { primary, secondary, text, textsecondary } = UseThemeColor();
 
+  //usestates
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Mobile, setMobile] = useState("");
@@ -15,7 +16,7 @@ export default function Register({ Screen, setScreen }) {
     message: "",
   });
 
-  //
+  //API
   const Regestieruser = () => {
     if (
       Name.trim() === "" ||
@@ -53,7 +54,6 @@ export default function Register({ Screen, setScreen }) {
         alignItems: "center",
       }}
     >
-      {/* <Grid size={12}> */}
       <Typography variant="h5" color={text} sx={{ fontWeight: 700 }}>
         Welcome
       </Typography>
@@ -70,7 +70,6 @@ export default function Register({ Screen, setScreen }) {
           Please fill in the details to register
         </Typography>
       </Grid>
-
       <Grid container size={12} spacing={2} sx={{ mt: 2 }}>
         <Grid size={12}>
           <TextField
@@ -111,7 +110,6 @@ export default function Register({ Screen, setScreen }) {
           />
         </Grid>
       </Grid>
-
       <Button
         variant="contained"
         fullWidth

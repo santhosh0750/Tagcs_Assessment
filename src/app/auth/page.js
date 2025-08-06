@@ -26,15 +26,16 @@ function Page() {
         mt: 8,
       }}
     >
-       <Image
-        src={"/tagcs.png"}
-        width={100}
-        height={100}
-        alt="Main Image"
-        style={{ marginTop: "10px" }}
-        priority
-      />
-      <Grid size={12} sx={{ display: "flex", justifyContent: "center" }}></Grid>
+      <Grid size={12} sx={{ display: "flex", justifyContent: "center" }}>
+        <Image
+          src={"/tagcs.png"}
+          width={100}
+          height={100}
+          alt="Main Image"
+          style={{ marginTop: "10px" }}
+          priority
+        />
+      </Grid>
       <Grid size={{ md: 3.8, xs: 12 }} sx={{ mt: 2 }}>
         <Box
           sx={{

@@ -30,21 +30,20 @@ export const lightTheme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          borderRadius: 7, // Rounded corners
+          borderRadius: 7,
           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
 
           "& fieldset": {
             borderColor: "#D0D5DD",
 
-            // borderColor: "#A1A1AA", // Primary border
             padding: "15px 10px",
           },
           "&:hover fieldset": {
-            borderColor: "1E3A8A", // Darker blue on hover
+            borderColor: "1E3A8A",
             fontFamily: "Inter, sans-serif",
           },
           "&.Mui-focused fieldset": {
-            borderColor: "#1E3A8A", // Focused state
+            borderColor: "#1E3A8A",
             fontFamily: "Inter, sans-serif",
           },
         },
@@ -53,12 +52,12 @@ export const lightTheme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: "#292D3299", // Default color
+          color: "#292D3299",
           fontFamily: "Inter, sans-serif",
 
           fontSize: 14,
           "&.Mui-focused": {
-            color: "#0d47a1", // Focused state
+            color: "#0d47a1",
             fontFamily: "Inter, sans-serif",
           },
         },
@@ -67,16 +66,16 @@ export const lightTheme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: "10px", // Ensuring string for consistency
-          textTransform: "none", // Disable uppercase text
-          fontWeight: 400, // Normal font weight
+          borderRadius: "10px",
+          textTransform: "none",
+          fontWeight: 400,
           fontSize: 13,
           fontFamily: "Inter, sans-serif",
           transition: "all 0.3s ease-in-out",
           backgroundColor: "#1E3A8A",
           color: "#fff",
           "&:hover": {
-            backgroundColor: "#314e97", // Darker shade on hover
+            backgroundColor: "#314e97",
             color: "#fff",
           },
           "&.Mui-disabled": {
@@ -92,7 +91,7 @@ export const lightTheme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          fontFamily: "Inter, sans-serif", // Your preferred font
+          fontFamily: "Inter, sans-serif",
           WebkitFontSmoothing: "antialiased",
           MozOsxFontSmoothing: "grayscale",
           textRendering: "optimizeLegibility",

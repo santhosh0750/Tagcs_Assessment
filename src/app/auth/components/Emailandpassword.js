@@ -6,7 +6,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,9 +16,9 @@ import { useRouter } from "next/navigation";
 
 export default function Emailandpassword({ Screen, setScreen }) {
   const { primary, secondary, text, textsecondary } = UseThemeColor();
+  //
   const dispatch = useDispatch();
-      const router = useRouter()
-  
+  const router = useRouter();
 
   //usestate
   const [Email, setEmail] = useState("");
@@ -29,8 +29,8 @@ export default function Emailandpassword({ Screen, setScreen }) {
     message: "",
   });
   const [PasswordShow, SetPasswordShow] = useState(false);
-  const userInfo = useSelector((state) => state.user);
 
+  //API
   const credentialcheck = () => {
     if (Password.trim() === "" || Email.trim === "") {
       setAlertMessage({
@@ -47,23 +47,23 @@ export default function Emailandpassword({ Screen, setScreen }) {
       type: "success",
       message: "Welome Back",
     });
-    
     setAlertOpen(true);
     setTimeout(() => {
       setAlertOpen(false);
-      router.push('dashboard')
+      router.push("dashboard");
     }, 2000);
-      localStorage.setItem('Logindetails',JSON.stringify({
-        name:Email,
-      }))
+    localStorage.setItem(
+      "Logindetails",
+      JSON.stringify({
+        name: Email,
+      })
+    );
     dispatch({
-      type:'LOGIN',
-      data:{
-        name:Email,
-      }
-    })
-
-
+      type: "LOGIN",
+      data: {
+        name: Email,
+      },
+    });
   };
   return (
     <Grid
@@ -75,11 +75,9 @@ export default function Emailandpassword({ Screen, setScreen }) {
         alignItems: "center",
       }}
     >
-      {/* <Grid size={12}> */}
       <Typography variant="h5" color={primary} sx={{ fontWeight: 700 }}>
         Hello Again!
       </Typography>
-      {/* </Grid> */}
       <Grid
         size={12}
         sx={{
@@ -140,7 +138,6 @@ export default function Emailandpassword({ Screen, setScreen }) {
           },
         }}
       />
-      
       <Button
         size="medium"
         variant="contained"
@@ -150,7 +147,6 @@ export default function Emailandpassword({ Screen, setScreen }) {
       >
         Sign In
       </Button>
-
       <Grid
         size={12}
         sx={{
@@ -166,15 +162,12 @@ export default function Emailandpassword({ Screen, setScreen }) {
           sx={{
             fontWeight: 400,
             fontSize: 14,
-            "&:hover": { color: primary,
-            fontSize:15
-
-             },
+            "&:hover": { color: primary, fontSize: 15 },
             cursor: "pointer",
             textDecoration: "underline",
           }}
           onClick={() => {
-            setScreen(true)
+            setScreen(true);
           }}
         >
           New user ? Regeister here
